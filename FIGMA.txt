@@ -1,0 +1,29 @@
+BELAJAR GO! GO! GO!
+
+FIGMA
+
+Latar disebut dengan canvas
+Sebelah kanan disebut sebagai properties
+Sebelah kiri disebut sebagai layer
+Sebelah atas disebut tools bar
+
+Move tools : 
+Frame : hp, tablet, desktop
+Place image : untuk mengimpor gambar dari luar ke dalam
+
+Ctrl + d => untuk duplikat
+Ctrl + Shift + K => untuk menambahkan component
+
+Pen tools : untuk membuat sebuah objek yang diinginkan
+Text : untuk membuat sebuah teks
+Jenis dan ukuran font bisa ditentukan
+Hand tools : untuk menggeser canvas sehingga mempermudah dalam melihat project secara keseluruhan
+Add comment : menambah komen => sangat membantu dalam proses kolaborasi bersama teman 
+
+
+AUTO LAYOUT 
+Horizontal layout : akan menambahkan komponen yang di duplikat ke arah kanan
+Vertical layout : akan menambahkan komponen yang di duplikat ke arah bawah
+Wrap : untuk kustomisasi jarak yang akan digunakan pada setiap komponen 
+
+Individual padding : 
