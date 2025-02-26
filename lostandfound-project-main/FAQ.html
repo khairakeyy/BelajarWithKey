@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome | Lost and Found Items</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/style.css" />
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playpen+Sans:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+   
+    <div class="faq-section">
+      <div class="faq-main">
+        <h3>Frequently <span style="color: #004274;">Asked Question</span></h3>
+      </div>
+      <div class="faq-container">
+        <!-- Pertanyaan 1 -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h4>Apa itu Lost and Found Items?</h4>
+            <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Lost and Found Items adalah layanan yang membantu mahasiswa mahasiwi Telkom University menemukan barang yang hilang atau melaporkan barang yang ditemukan.
+            </p>
+          </div>
+        </div>
+    
+        <!-- Pertanyaan 2 -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h4>Bagaimana cara melaporkan barang hilang?</h4>
+            <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Anda dapat melaporkan barang hilang dengan mengisi formulir di halaman laporan kami. Informasi detail akan membantu mempercepat proses.
+            </p>
+          </div>
+        </div>
+    
+        <!-- Pertanyaan 3 -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h4>Apakah layanan ini gratis?</h4>
+            <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Ya, layanan ini sepenuhnya gratis untuk digunakan oleh Telutizen.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pertanyaan 4 -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h4>Bagaimana jika saya menemukan barang yang sesuai dengan laporan?</h4>
+            <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Anda dapat menghubungi pemilik barang melalui informasi kontak yang tercantum di laporan mereka.
+            </p>
+          </div>
+        </div> 
+
+        <!-- Pertanyaan 5 -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h4>Berapa lama laporan saya akan ditampilkan di platform?</h4>
+            <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Laporan Anda akan tetap aktif hingga barang Anda ditemukan atau Anda memutuskan untuk menutup laporan tersebut.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+     
+    
+    <!-- Footer Section -->
+    <section>
+      <div class="footer">
+        <div class="footer-main">
+          <div class="fotter-img">
+            <img src="Assets/img/lostnfoundlogowhite.png" height="85px" />
+          </div>
+        </div>
+        <div class="footer-section">
+          <div class="footer-content">
+            <h3>About</h3>
+            <ul>
+              <li>About Lost and Found Items</li>
+              <li>Feedback</li>
+              <li>Terms and Condition Lost And Found Items</li>
+            </ul>
+          </div>
+          <div class="footer-content">
+            <h3>Lost and Found Items</h3>
+            <ul>
+              <li>Lost Items</li>
+              <li>Found Items</li>
+              <li>Information About Lost and Found Items</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+
+    <script>
+      let menuList = document.getElementById("menuList");
+      menuList.style.maxHeight = "0px";
+
+      function toggleMenu() {
+        if (menuList.style.maxHeight == "0px") {
+          menuList.style.maxHeight = "300px";
+        } else {
+          menuList.style.maxHeight = "0px";
+        }
+      }
+    </script>
+    
+    <script>
+      function toggleFaq(element) {
+      const parent = element.parentElement;
+
+      // Tutup semua FAQ lainnya
+      const allItems = document.querySelectorAll(".faq-item");
+      allItems.forEach((item) => {
+        if (item !== parent) {
+          item.classList.remove("open");
+        }
+      });
+
+      // Toggle FAQ yang dipilih
+      parent.classList.toggle("open");
+    }
+    </script>
+
+    <script
+      src="https://kit.fontawesome.com/f8e1a90484.js"
+      crossorigin="anonymous"
+    ></script>
+    
+  </body>
+</html>

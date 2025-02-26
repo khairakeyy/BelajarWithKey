@@ -1,0 +1,44 @@
+h1 {
+    color:brown;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30;
+}
+
+p {
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+body {
+    background-color: azure;
+}
+
+a {
+    background-color: brown;
+}
+
+.box {
+    width: 200px;
+
+    height: 200px;
+    
+    background-color: greenyellow;
+
+    box-shadow: 6px 6px 5px 10px #666666;
+}
+
+.rounded {
+    width: 300px;
+    padding: 20px;
+    border: 4px solid darkgray;
+    
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    #content, aside {
+        width: 100%;
+        padding: 0;
+    }
+}

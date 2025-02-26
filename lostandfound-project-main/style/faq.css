@@ -1,0 +1,113 @@
+/* Footer Section */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 20px;
+  background-color: #124076;
+  gap: 2rem;
+}
+
+.footer-main {
+  flex: 1 1 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-main img {
+  max-width: 220px; /* Ubah ukuran logo */
+  height: auto; /* Menjaga proporsi logo */
+}
+
+.footer-section {
+  display: flex;
+  flex: 1 1 300px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-content h3 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.footer-content li {
+  color: #cccccc;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+
+/* Footer Section */
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+
+  .search-bar {
+    flex-direction: column; /* Ubah menjadi kolom */
+    align-items: stretch; /* Buat elemen stretch agar penuh */
+    gap: 10px; /* Jarak antar elemen */
+  }
+
+  #search,
+  .btn-list {
+    width: 100%; /* Lebar penuh */
+    border-radius: 0.5rem; /* Sesuaikan agar lebih estetis */
+  }
+
+  .footer {
+    flex-direction: column; /* Atur ulang menjadi kolom */
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .footer-section {
+    flex-direction: column; /* Atur kolom secara vertikal */
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-content {
+    align-items: center;
+  }
+
+  .footer-content h3 {
+    font-size: 1rem; /* Ukuran teks lebih kecil */
+  }
+
+  .footer-content li {
+    font-size: 0.9rem; /* Ukuran lebih kecil */
+  }
+}
+
+/* Responsif untuk layar sangat kecil */
+@media (max-width: 480px) {
+  html {
+    font-size: 75%;
+  }
+
+  #search {
+    font-size: 14px; /* Ukuran font lebih kecil */
+    padding: 8px; /* Padding lebih kecil */
+  }
+
+  .report-main .report .report-section {
+    flex-direction: column; /* Susun tombol secara vertikal */
+    align-items: center; /* Posisikan tombol di tengah */
+    gap: 1rem; /* Jarak antar tombol */
+  }
+
+  .report-main .report .report-section .report-btn {
+    width: 100%; /* Buat tombol memiliki lebar penuh */
+    text-align: center; /* Pusatkan teks dalam tombol */
+  }
+}

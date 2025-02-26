@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="style/sign-up.css" />
+    <!-- Google Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playpen+Sans:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- BX BX ICONS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section>
+      <div class="sign-in section">
+        <div class="logo-img">
+          <a href="index.html">
+            <img
+              src="Assets/img/lostnnfoundtransprnt.png"
+              height="80px"
+              alt="Logo"
+            />
+          </a>
+        </div>
+        
+        <div class="login-content">
+          <div class="login-container">
+            <div class="login-welcome">
+              <h1>Sign Up</h1>
+              <p>Let's get started with creating your new account.</p>
+            </div>
+            <form id="signUpForm">
+              <!-- Email -->
+              <input
+                class="input-field"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your Email"
+                required
+              />
+              <br />
+              <!-- Password -->
+              <input
+                class="input-field"
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter your Password"
+                required
+              />
+              <br />
+              <!-- Confirm Password -->
+              <input
+                class="input-field"
+                type="password"
+                name="confirm_password"
+                id="confirm_password"
+                placeholder="Re-enter your Password"
+                required
+              />
+              <br />
+              <!-- First Name -->
+              <input
+                class="input-field"
+                type="text"
+                name="first_name"
+                id="first_name"
+                placeholder="Enter your First Name"
+                required
+              />
+              <br />
+              <!-- Last Name -->
+              <input
+                class="input-field"
+                type="text"
+                name="last_name"
+                id="last_name"
+                placeholder="Enter your Last Name"
+                required
+              />
+              <br />
+              <!-- Phone -->
+              <input
+                class="input-field"
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="Example +62 852xxxx"
+                required
+              />
+              <br />
+              <!-- Terms and Conditions -->
+              <div class="options">
+                <label>
+                  <input type="checkbox" style="cursor: pointer" required /> I
+                  agree to the Lost and Found items terms
+                </label>
+              </div>
+              <!-- Submit Button -->
+              <button
+                class="btn-submit"
+                type="button"
+                onclick="submitForm()"
+                style="cursor: pointer"
+              >
+                Sign Up
+              </button>
+            </form>
+            <div class="sign-up btn">
+              <p>
+                Already have an account?
+                <a href="log_in.php" style="cursor: pointer">Log in here</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Password Validation -->
+    <script>
+      function submitForm() {
+        const form = document.getElementById("signUpForm");
+        const formData = new FormData(form);
+
+        fetch("process_register.php", {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => response.text())
+          .then((data) => {
+            if (data.includes("Pendaftaran berhasil")) {
+              Swal.fire({
+                icon: "success",
+                title: "Berhasil!",
+                text: data,
+                confirmButtonText: "OK", // Teks tombol
+                customClass: {
+                  confirmButton: "custom-gray", // Hubungkan ke CSS
+                },
+              }).then(() => {
+                // Redirect ke halaman login setelah SweetAlert ditutup
+                window.location.href = "log_in.php";
+              });
+            } else {
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: data,
+                confirmButtonText: "OK",
+                customClass: {
+                  confirmButton: "custom-gray",
+                },
+              });
+            }
+          })
+          .catch(() => {
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "Terjadi kesalahan! Silakan coba lagi.",
+              confirmButtonText: "OK",
+              customClass: {
+                confirmButton: "custom-gray",
+              },
+            });
+          });
+      }
+    </script>
+  </body>
+</html>

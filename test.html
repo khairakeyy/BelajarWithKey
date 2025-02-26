@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrisi</title>
+    <!-- Link ke CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <div class="container">
+        <header class="bg-dark text-white py-3 position-sticky">
+            <div class="container d-flex justify-content-between align-items-center">
+                <!-- Menambahkan kelas text-center untuk memusatkan teks -->
+                <div class="h4 mb-0" id="logo" style="text-align: center;">Masukkan Makanan
+                    <nav>
+                        <a href="#home" class="text-white me-3">Home</a>
+                        <a href="#progress" class="text-white me-3">Progress</a>
+                        <a href="#latihan" class="text-white me-3">Latihan</a>
+                        <a href="#sleep" class="text-white">Sleep</a>
+                        <a href="#track" class="text-white">Track Food</a>
+                        <a href="#setting" class="text-white">Setting</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    </div>
+    
+            
+        <div class="food-selection my-5">
+            <div class="food-list">
+                <h2 class="mb-4">Makanan</h2>
+                <div class="food-item d-flex justify-content-between align-items-center mb-3">
+                    <img src="food1.jpg" alt="Makanan" class="img-fluid" style="max-width: 50px;">
+                    <p>Makanan</p>
+                    <div class="amount-controls">
+                        <button class="btn btn-outline-secondary">+</button>
+                        <span>12gr</span>
+                        <button class="btn btn-outline-secondary">-</button>
+                    </div>
+                </div>
+                <!-- Tambahkan item makanan lainnya sesuai kebutuhan -->
+            </div>
+
+            <div class="meal-time">
+                <div class="meal-section mb-4">
+                    <h2>Pagi</h2>
+                    <div class="meal-items d-flex justify-content-start align-items-center">
+                        <img src="food1.jpg" alt="Makanan" class="img-fluid me-2" style="max-width: 50px;">
+                        <img src="food2.jpg" alt="Makanan" class="img-fluid me-2" style="max-width: 50px;">
+                        <img src="food3.jpg" alt="Makanan" class="img-fluid me-2" style="max-width: 50px;">
+                        <button class="btn btn-outline-primary">+</button>
+                        <button class="btn btn-danger ms-2">🗑️</button>
+                        <span class="weight ms-2">100gr</span>
+                    </div>
+                </div>
+
+                <div class="meal-section mb-4">
+                    <h2>Siang</h2>
+                    <div class="meal-items d-flex justify-content-start align-items-center">
+                        <img src="food4.jpg" alt="Makanan" class="img-fluid me-2" style="max-width: 50px;">
+                        <img src="food5.jpg" alt="Makanan" class="img-fluid me-2" style="max-width: 50px;">
+                        <img src="food6.jpg" alt="Makanan" class="img-fluid me-2" style="max-width: 50px;">
+                        <button class="btn btn-outline-primary">+</button>
+                        <button class="btn btn-danger ms-2">🗑️</button>
+                        <span class="weight ms-2">90gr</span>
+                    </div>
+                </div>
+
+                <div class="meal-section mb-4">
+                    <h2>Malam</h2>
+                    <div class="meal-items d-flex justify-content-start align-items-center">
+                        <img src="food7.jpg" alt="Makanan" class="img-fluid me-2" style="max-width: 50px;">
+                        <img src="food8.jpg" alt="Makanan" class="img-fluid me-2" style="max-width: 50px;">
+                        <img src="food9.jpg" alt="Makanan" class="img-fluid me-2" style="max-width: 50px;">
+                        <button class="btn btn-outline-primary">+</button>
+                        <button class="btn btn-danger ms-2">🗑️</button>
+                        <span class="weight ms-2">70gr</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nutrition-info my-5">
+            <button class="btn btn-info mb-4">Saran Makanan</button>
+            
+            <div class="food-advice row g-4 justify-content-center">
+                <div class="food-card col-md-4 text-center">
+                    <img src="food-advice1.jpg" alt="Makanan Sehat" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px;">
+                </div>
+                <div class="food-card col-md-4 text-center">
+                    <img src="food-advice2.jpg" alt="Makanan Sehat" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px;">
+                </div>
+                <div class="food-card col-md-4 text-center">
+                    <img src="food-advice3.jpg" alt="Makanan Sehat" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px;">
+                </div>
+            </div>
+
+            <div class="benefits my-4">
+                <h3>Benefit</h3>
+                <ul>
+                    <li>Pemenuhan Nutrisi yang Diperlukan Tubuh</li>
+                    <li>Menjaga Berat Badan yang Sehat</li>
+                    <li>Meningkatkan Sistem Kekebalan Tubuh</li>
+                </ul>
+            </div>
+
+            <div class="total-weight my-4">
+                <h3>Total Weight</h3>
+                <p>290gr</p>
+                <button class="btn btn-success">Lihat Nutrisi</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tambahkan script Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
